@@ -3,9 +3,13 @@ const sendButton = document.querySelector("#send-btn");
 const chatContainer = document.querySelector(".chat-container");
 const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
+const fetch= require('node-fetch');
+require('dotenv').config();
+
+console.log(process.env);
 
 let userText = null;
-const API_KEY = "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"; 
+const API_KEY = "process.env.API_KEY"; 
 
 const loadDataFromLocalstorage = () => {
     // Load saved chats and theme from local storage and apply/add on the page
